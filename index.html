@@ -2,56 +2,62 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>PairMatch</title>
-  <meta name="description" content="Blockchain Based Game to Find Matching Icons and Get Rewards">
-  <script src="./assets/js/game.js" defer></script>
-  <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="./assets/css/styles.css">
+    <meta charset="utf-8">
+    <title>PairMatch</title>
+    <meta name="description" content="Blockchain Based Game to Find Matching Icons and Get Rewards">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/web3.min.js" defer></script>
+    <script src="./assets/js/dapp.js" defer></script>
+    <script src="./assets/js/game.js" defer></script>
 </head>
 
 <body class="slideshow">
-  <header>
-    <h1>PairMatch</h1>
-    <p>Test Your Memory and Play Against Time!</p>
+    <header>
+        <h1>PairMatch</h1>
+        <p>Test Your Memory and Play Against Time!</p>
 
-    <div>
-      <section class="score-panel" style="margin: 0 auto;">
-        <span class="moves">0 Moves</span>
-  
-        <div class="timer">
-          <i class="fa fa-clock-o"></i>
-          <span class="hour"> 00</span> :
-          <span class="minute"> 00</span> :
-          <span class="seconds"> 00</span>
+        <div>
+            <section class="score-panel" style="margin: 0 auto;">
+                <span class="moves">0 Moves</span>
+
+                <div class="timer">
+                    <i class="fa fa-clock-o"></i>
+                    <span class="hour"> 00</span> :
+                    <span class="minute"> 00</span> :
+                    <span class="seconds"> 00</span>
+                </div>
+
+                <div class="restart">
+                    <i class="fas fa-redo"></i>
+                </div>
+            </section>
         </div>
-  
-        <div class="restart">
-          <i class="fa fa-repeat"></i>
+    </header>
+
+    <div class="game-container" style="margin-top: 50px;">
+        <main id="cards-board"></main>
+    </div>
+
+    <div class="result">
+        <div class="result-box">
+            <h1>Congratulations🎉</h1>
+            <hr>
+            <p>Time Taken : <span class='time-result'></span></p>
+            <p>Moves Made : <span class='moves-result'> </span></p>
+
+            <button class="replay-btn">Play Again</button>
         </div>
-      </section>
     </div>
-  </header>
 
-  <div class="game-container" style="margin-top: 50px;">
-    <main id="cards-board"></main>
-  </div>
-
-  <div class="result">
-    <div class="result-box">
-      <h1>Congratulations🎉</h1>
-      <hr>
-      <p>Time Taken : <span class='time-result'></span></p>
-      <p>Moves Made : <span class='moves-result'> </span></p>
-
-      <button class="replay-btn">Play Again</button>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <p>Developed by: <a href="https://github.com/Shachindra"> Shachindra</a></p>
-  </footer>
+    <footer class="footer">
+        <p>Developed by: <a href="https://github.com/Shachindra"> Shachindra</a></p>
+    </footer>
 </body>
 
 </html>
