@@ -1,109 +1,101 @@
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 html,
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
-  padding: 30px 0;
-  text-align: center;
-  background: #1abcbc;
-  color: white;
-  font-size: 30px;
+    padding: 30px 0;
+    text-align: center;
+    background: #1abcbc;
+    color: white;
+    font-size: 30px;
 }
 
 footer {
-  padding: 30px 0;
-  text-align: center;
-  background: #1abcbc;
-  color: white;
-  font-size: 30px;
+    padding: 30px 0;
+    text-align: center;
+    background: #1abcbc;
+    color: white;
+    font-size: 30px;
 }
 
 .game-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 h1 {
-  font: 40px/1.5 'Roboto', sans-serif;
-  font-weight: 300;
-  margin: 12px;
+    font: 40px/1.5 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 12px;
 }
 
 .slideshow {
-  animation-name: background;
-  animation-duration: 60s;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  -webkit-animation-name: background;
-  -webkit-animation-duration: 60s;
-  -webkit-animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
+    animation-name: background;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: background;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
 }
 
 @keyframes background {
-  0% {
-    background: #ffffff url('../images/background-space.png');
-  }
-
-  25% {
-    background: #ffffff url('../images/background-canyon.png');
-  }
-
-  50% {
-    background: #ffffff url('../images/background-beach.png');
-  }
-
-  75% {
-    background: #ffffff url('../images/background-cliff.png');
-  }
-
-  100% {
-    background: #ffffff url('../images/background-bridge.png');
-  }
+    0% {
+        background: #ffffff url('../images/background-space.png');
+    }
+    25% {
+        background: #ffffff url('../images/background-canyon.png');
+    }
+    50% {
+        background: #ffffff url('../images/background-beach.png');
+    }
+    75% {
+        background: #ffffff url('../images/background-cliff.png');
+    }
+    100% {
+        background: #ffffff url('../images/background-bridge.png');
+    }
 }
 
 @-webkit-keyframes background {
-  0% {
-    background: #ffffff url('../images/background-space.png');
-  }
-
-  25% {
-    background: #ffffff url('../images/background-canyon.png');
-  }
-
-  50% {
-    background: #ffffff url('../images/background-beach.png');
-  }
-
-  75% {
-    background: #ffffff url('../images/background-cliff.png');
-  }
-
-  100% {
-    background: #ffffff url('../images/background-bridge.png');
-  }
+    0% {
+        background: #ffffff url('../images/background-space.png');
+    }
+    25% {
+        background: #ffffff url('../images/background-canyon.png');
+    }
+    50% {
+        background: #ffffff url('../images/background-beach.png');
+    }
+    75% {
+        background: #ffffff url('../images/background-cliff.png');
+    }
+    100% {
+        background: #ffffff url('../images/background-bridge.png');
+    }
 }
 
 
@@ -112,153 +104,133 @@ h1 {
  */
 
 .deck {
-  width: 660px;
-  min-height: 680px;
-  background: linear-gradient(160deg, #56bcbf 0%, #047190 100%);
-  padding: 32px;
-  border-radius: 10px;
-  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0 3em;
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #56bcbf 0%, #047190 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
 }
 
 .deck .card {
-  height: 125px;
-  width: 125px;
-  background: #2e3d49;
-  font-size: 0;
-  color: #ffffff;
-  border-radius: 8px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-  transition: all .3s ease-in-out;
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transition: all .3s ease-in-out;
 }
 
 .deck .card:hover {
-  transform: scale3d(1, 1, 2) rotateZ(0deg);
-  background: rgba(46, 61, 73, 0.815);
+    transform: scale3d(1, 1, 2) rotateZ(0deg);
+    background: rgba(46, 61, 73, 0.815);
 }
 
 .deck .card.open {
-  transform: rotateY(0);
-  background: #02b3e4;
-  cursor: default;
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
 }
 
 .deck .card.show {
-  font-size: 33px;
+    font-size: 33px;
 }
 
 .deck .card.match {
-  cursor: default;
-  background: #02ccba;
-  font-size: 33px;
-  animation: match-shake 0.5s;
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+    animation: match-shake 0.5s;
 }
 
 .deck .card.nomatch {
-  transition: 100ms linear;
-  background: #f08080;
-  border-radius: 0;
-  animation: shake 0.5s;
+    transition: 100ms linear;
+    background: #f08080;
+    border-radius: 0;
+    animation: shake 0.5s;
 }
 
 @keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }
 
 @-webkit-keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }
 
 
@@ -267,55 +239,47 @@ h1 {
  */
 
 @keyframes match-shake {
-
-  0%,
-  100% {
-    transform: translate(0, 2px);
-  }
-
-  10%,
-  40%,
-  70% {
-    transform: translate(0, -3px);
-  }
-
-  20%,
-  50%,
-  80% {
-    transform: translate(0, 0px);
-  }
-
-  30%,
-  60%,
-  90% {
-    transform: translate(0, 3px);
-  }
+    0%,
+    100% {
+        transform: translate(0, 2px);
+    }
+    10%,
+    40%,
+    70% {
+        transform: translate(0, -3px);
+    }
+    20%,
+    50%,
+    80% {
+        transform: translate(0, 0px);
+    }
+    30%,
+    60%,
+    90% {
+        transform: translate(0, 3px);
+    }
 }
 
 @-webkit-keyframes match-shake {
-
-  0%,
-  100% {
-    transform: translate(0, 2px);
-  }
-
-  10%,
-  40%,
-  70% {
-    transform: translate(0, -3px);
-  }
-
-  20%,
-  50%,
-  80% {
-    transform: translate(0, 0px);
-  }
-
-  30%,
-  60%,
-  90% {
-    transform: translate(0, 3px);
-  }
+    0%,
+    100% {
+        transform: translate(0, 2px);
+    }
+    10%,
+    40%,
+    70% {
+        transform: translate(0, -3px);
+    }
+    20%,
+    50%,
+    80% {
+        transform: translate(0, 0px);
+    }
+    30%,
+    60%,
+    90% {
+        transform: translate(0, 3px);
+    }
 }
 
 
@@ -324,152 +288,200 @@ h1 {
  */
 
 .score-panel {
-  display: flex;
-  justify-content: space-between;
-  width: 345px;
-  margin-bottom: 10px;
-  font: 18px/1.5 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    margin-bottom: 10px;
+    font: 18px/1.5 'Roboto', sans-serif;
 }
 
 .score-panel .restart {
-  float: right;
-  cursor: pointer;
+    float: right;
+    cursor: pointer;
 }
 
 
 /* to stop event listener after opening two cards */
 
 .stop-event {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 
 /* result */
 
 .result {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(49, 49, 49, 0.7);
-  z-index: 1;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(49, 49, 49, 0.7);
+    z-index: 1;
 }
 
 .result-box {
-  position: fixed;
-  background-color: #fff;
-  top: 40%;
-  left: 50%;
-  width: 625px;
-  margin-left: -312px;
-  padding: 40px;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 1px 1px 40px #e3e1e1;
-  list-style: none;
+    position: fixed;
+    background-color: #fff;
+    top: 40%;
+    left: 50%;
+    width: 625px;
+    margin-left: -312px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 40px #e3e1e1;
+    list-style: none;
 }
 
 .result-box h1 {
-  margin: auto;
+    margin: auto;
 }
 
 .replay-btn {
-  color: #f3f7f7;
-  background-color: #02b3e4;
-  width: 120px;
-  height: 30px;
-  border: 1px solid #e9edef;
-  border-radius: 5px;
-  box-shadow: 1px 2px 4px rgba(235, 235, 235, 0.48);
-  font-size: 1em;
+    color: #f3f7f7;
+    background-color: #02b3e4;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #e9edef;
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px rgba(235, 235, 235, 0.48);
+    font-size: 1em;
 }
 
 .replay-btn:hover {
-  background-color: #f3f7f7;
-  color: #02b3e4;
-  transition: all 0.5s ease;
+    background-color: #f3f7f7;
+    color: #e40202;
+    transition: all 0.5s ease;
 }
 
 hr {
-  margin: 0 auto;
-  width: 80%;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .footer {
-  text-align: center;
+    text-align: center;
+}
+
+.wallet {
+    border: 5px outset gray;
+    background-color: lightblue;
+    opacity: 0.5;
+    text-align: center;
+}
+
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: #4eb10c;
+    border: 5px outset rgba(12, 184, 146, 0.514);
+    border-radius: 3em;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: solid;
+    display: inline-block;
+    font-size: 24px;
+    margin: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.button:hover {
+    cursor: default;
 }
 
 
 /* Media Queries  */
 
 @media screen and (max-width: 650px) {
-  .score-panel {
-    width: 90%;
-    margin: 0 auto;
-    flex-basis: 40%;
-  }
-
-  .deck {
-    width: 95%;
-    padding: 3%;
-    margin: 0 auto;
-    min-height: 100%;
-  }
-
-  .deck .card {
-    height: 92px;
-    margin-top: 2%;
-  }
-
-  .result-box {
-    width: 90%;
-    left: 5%;
-    top: 25%;
-    margin: auto 0;
-  }
+    .score-panel {
+        width: 90%;
+        margin: 0 auto;
+        flex-basis: 40%;
+    }
+    .deck {
+        width: 95%;
+        padding: 3%;
+        margin: 0 auto;
+        min-height: 100%;
+    }
+    .deck .card {
+        height: 92px;
+        margin-top: 2%;
+    }
+    .result-box {
+        width: 90%;
+        left: 5%;
+        top: 25%;
+        margin: auto 0;
+    }
 }
 
 @media screen and (max-width: 368px) {
-  .deck .card {
-    width: 68px;
-    height: 92px;
-    margin-top: 2%;
-  }
+    .deck .card {
+        width: 68px;
+        height: 92px;
+        margin-top: 2%;
+    }
 }
 
 @media screen and (min-width: 369px) and (max-width: 460px) {
-  .deck .card {
-    width: 82px;
-  }
+    .deck .card {
+        width: 82px;
+    }
 }
 
 @media screen and (min-width: 461px) and (max-width: 516px) {
-  .deck .card {
-    width: 92px;
-  }
+    .deck .card {
+        width: 92px;
+    }
 }
 
 @media screen and (min-width: 517px) and (max-width: 580px) {
-  .deck .card {
-    width: 105px;
-  }
+    .deck .card {
+        width: 105px;
+    }
 }
 
 @media screen and (min-width: 651px) and (max-width: 820px) {
-  .result-box {
-    width: 80%;
-    left: 10%;
-    top: 35%;
-    margin: auto 0;
-  }
+    .result-box {
+        width: 80%;
+        left: 10%;
+        top: 35%;
+        margin: auto 0;
+    }
 }
 
 @media screen and (min-width: 821px) and (max-width: 1024px) {
-  .result-box {
-    width: 60%;
-    left: 20%;
-    top: 32%;
-  }
+    .result-box {
+        width: 60%;
+        left: 20%;
+        top: 32%;
+    }
 }

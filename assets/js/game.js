@@ -46,7 +46,7 @@ const result = document.querySelector('.result');
 const timeResult = document.querySelector('.time-result');
 const movesResult = document.querySelector('.moves-result');
 
-const playAgain = document.querySelector('.replay-btn');
+const closeResults = document.querySelector('.replay-btn');
 
 // Cards Array
 let checkCards = [];
@@ -245,12 +245,20 @@ function gameOver() {
         //stop the timer and show the Result
         clearInterval(timeCounter);
         result.style.display = 'block';
+        EndGame((seconds + minutes * 60 + hours * 3600), moves);
     }
 }
 
-playAgain.addEventListener('click', function() {
+closeResults.addEventListener('click', function() {
     // to close the result and restart the game
     result.style.display = 'none';
-    restartGame();
-    timerOn = false;
+    window.location.reload();
 })
+
+function overlayOn() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function overlayOff() {
+    document.getElementById("overlay").style.display = "none";
+}

@@ -13,6 +13,8 @@
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <script src="./assets/js/web3.min.js" defer></script>
+    <script src="./assets/js/RandomNumberConsumer.js" defer></script>
+    <script src="./assets/js/PairMatch.js" defer></script>
     <script src="./assets/js/dapp.js" defer></script>
     <script src="./assets/js/game.js" defer></script>
 </head>
@@ -40,6 +42,22 @@
         </div>
     </header>
 
+    <div class="wallet">
+        <p><span>Wallet Address: </span><span id="gamerWalletAddress"></span></p>
+        <p><span>ETH Balance: </span><span id="ethBalance"></span></p>
+        <p><span>PMR Balance: </span><span id="pmrBalance"></span></p>
+    </div>
+
+    <div id="overlay">
+        <button class="button" onclick="playGame()">Start Game</button>
+        <div class="wallet">
+            <p><span id="transactionHash"></span></p>
+            <p><span id="blockNumber"></span></p>
+            <p><span id="gameID"></span></p>
+            <p><span id="randomNumber"></span></p>
+        </div>
+    </div>
+
     <div class="game-container" style="margin-top: 50px;">
         <main id="cards-board"></main>
     </div>
@@ -50,8 +68,8 @@
             <hr>
             <p>Time Taken : <span class='time-result'></span></p>
             <p>Moves Made : <span class='moves-result'> </span></p>
-
-            <button class="replay-btn">Play Again</button>
+            <p><span id='gameEndTXHash'></span></p>
+            <button class="replay-btn">Close</button>
         </div>
     </div>
 

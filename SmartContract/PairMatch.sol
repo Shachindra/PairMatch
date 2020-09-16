@@ -15,7 +15,7 @@ contract PairMatch is ERC20 {
     RandomNumberConsumer randomNumberGeneratorContract;
     
     event StartGame(address indexed gamer, bytes32 indexed gameID, uint256 startTime);
-    event GameOver(address indexed gamer, bytes32 indexed gameID, uint256 startTime, uint256 endTime, uint movesMade, uint timeTaken);
+    event GameOver(address indexed gamer, bytes32 indexed gameID, uint256 endTime, uint movesMade, uint timeTaken);
     
     mapping(address => mapping(bytes32 => Game)) public Games;
     
@@ -24,15 +24,17 @@ contract PairMatch is ERC20 {
         randomNumberGeneratorContract = RandomNumberConsumer(_randomNumberGeneratorContract);
     }
     
-    function startGame(uint256 _startTime) public virtual {
-        bytes32 gameID = randomNumberGeneratorContract.getRandomNumber(_startTime);
+    function startGame(uint256 _startTime) public returns (bytes32 gameID) {
+        bytes32 _gameID = randomNumberGeneratorContract.getRandomNumber(_startTime);
         Game memory newGame = Game({
             startTime: _startTime,
             endTime: 0,
             movesMade: 0,
             timeTaken: 0
         });
-        Games[msg.sender][gameID] = newGame;
+        Games[msg.sender][_gameID] = newGame;
+        emit StartGame(msg.sender, _gameID, _startTime);
+        return _gameID;
     }
     
     function gameOver(bytes32 _gameID, uint256 _endTime, uint _movesMade, uint _timeTaken) public virtual {
@@ -40,6 +42,7 @@ contract PairMatch is ERC20 {
         Games[msg.sender][_gameID].movesMade = _movesMade;
         Games[msg.sender][_gameID].timeTaken = _timeTaken;
         _mint(msg.sender, 1 * 10 ** 18);
+        emit GameOver(msg.sender, _gameID, _endTime, _movesMade, _timeTaken);
     }
 }
 
