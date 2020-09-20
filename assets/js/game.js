@@ -53,12 +53,12 @@ let checkCards = [];
 let matchedCards = [];
 
 // Shuffle function from http://stackoverflow.com/a/2450976
-function shuffle(array) {
+function shuffle(randomNumber, array) {
     var currentIndex = array.length,
         temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
+        randomIndex = Math.floor(randomNumber * currentIndex);
         currentIndex -= 1;
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
@@ -70,17 +70,17 @@ function shuffle(array) {
 
 // Create the CardsBoard
 
-createCardsBoard();
+createCardsBoard(Math.random());
 
 // Deck Creation and adding EventListener
-function createCardsBoard() {
+function createCardsBoard(randomNumber) {
     // To clear the old card board 
     cardsBoard.innerHTML = "";
     // creat new ul element to append it to "cardsBoard"
     const myNewDeck = document.createElement('ul');
     myNewDeck.classList.add('deck');
     // shuffle the icons list
-    let shufIcons = shuffle(icons);
+    let shufIcons = shuffle(randomNumber, icons);
     for (let i = 0; i < shufIcons.length; i++) {
         const newLi = document.createElement('li');
         newLi.classList.add('card');
@@ -220,7 +220,7 @@ function restartGame() {
     checkCards = [];
     // to clear the old board, create a new 
     // shuffled cards board  
-    createCardsBoard();
+    createCardsBoard(Math.random());
     // to stop the timer
     clearInterval(timeCounter);
     // reset the timer to zero
