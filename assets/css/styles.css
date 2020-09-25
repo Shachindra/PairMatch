@@ -375,7 +375,7 @@ hr {
 #overlay {
     position: fixed;
     /* Sit on top of the page content */
-    display: none;
+    display: block;
     /* Hidden by default */
     width: 100%;
     /* Full width (cover the whole page) */
@@ -387,7 +387,7 @@ hr {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     /* Black background with opacity */
-    z-index: 2;
+    z-index: 9999;
     /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer;
     /* Add a pointer on hover */
@@ -484,4 +484,14 @@ hr {
         left: 20%;
         top: 32%;
     }
+}
+
+
+.spinning span {
+  animation: rotate 0.4s linear infinite;
+}
+
+@keyframes rotate{
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
